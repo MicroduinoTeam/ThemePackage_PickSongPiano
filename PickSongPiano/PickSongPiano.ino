@@ -29,7 +29,7 @@ ColorLED strip = ColorLED(LED_NUM, PIN_LED);  //ColorLED类实例化
 AudioPro midiPlayer;            //AudioPro类实例化
 
 DigitalKey touchButton[7] = {   //touchButton引脚分配
-  DigitalKey(4), DigitalKey(5), DigitalKey(6), DigitalKey(8), DigitalKey(9), DigitalKey(A0), DigitalKey(A1)
+  DigitalKey(4), DigitalKey(5), DigitalKey(6), DigitalKey(8), DigitalKey(9), DigitalKey(A0), DigitalKey(A6)
 };
 
 int playNum = 7;  //初始定义曲目编号变量为7
@@ -112,7 +112,7 @@ void loop() {   /**********播放选择的曲目，彩灯随音乐亮灭*/
       midiPlayer.noteOn(0, toneNum[notationName[playNum][i] - 1], 120);  //播放相应音级
       strip.setPixelColor(playSta, colorArray[playSta + 1]);             //设置相应灯的颜色
       strip.show();                                                      //将灯点亮成新设置的颜色
-      delay(300 * (beatsName[playNum][i]));                              //延时节拍相对应时间
+      delay(30 * (beatsName[playNum][i]));                              //延时节拍相对应时间
       midiPlayer.noteOff(0, toneNum[notationName[playNum][i] - 1], 120); //关闭相应音级
       strip.setPixelColor(playSta, colorArray[0]);                       //设置相应灯的颜色
       strip.show();                                                      //将灯点亮成新设置的颜色
