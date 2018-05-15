@@ -29,7 +29,7 @@ ColorLED strip = ColorLED(LED_NUM, PIN_LED);  //ColorLED类实例化
 AudioPro midiPlayer;            //AudioPro类实例化
 
 DigitalKey touchButton[7] = {   //touchButton引脚分配
-  DigitalKey(4), DigitalKey(5), DigitalKey(6), DigitalKey(8), DigitalKey(9), DigitalKey(A0), DigitalKey(A6)
+  DigitalKey(4), DigitalKey(5), DigitalKey(6), DigitalKey(8), DigitalKey(9), DigitalKey(A0), DigitalKey(A1)
 };
 
 int playNum = 7;  //初始定义曲目编号变量为7
